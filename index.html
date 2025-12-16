@@ -13,9 +13,20 @@
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD33CRqwF-fO7Z9NioI9z98h0eDZ1la3cw&amp;libraries=places&amp;channel=2"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.bundle.min.js"></script>
 
-  <script type="text/javascript">
-    var $zoho=$zoho || {};$zoho.salesiq = $zoho.salesiq || {widgetcode:"ef1f3c45cc7cc847c2b1feac101cffc8315db17f88bd6e2388f18df54472e43e", values:{},ready:function(){}};var d=document;s=d.createElement("script");s.type="text/javascript";s.id="zsiqscript";s.defer=true;s.src="https://salesiq.zoho.com/widget";t=d.getElementsByTagName("script")[0];t.parentNode.insertBefore(s,t);d.write("<div id='zsiqwidget'></div>");
-  </script>
+<!-- Zoho 위젯 로더 -->
+<script>
+  (function () {
+    // Zoho SalesIQ 초기화 - ready 함수는 Angular 컴포넌트에서 설정
+    window.$zoho = window.$zoho || {};
+    window.$zoho.salesiq = window.$zoho.salesiq || {
+      widgetcode: "ef1f3c45cc7cc847c2b1feac101cffc8315db17f88bd6e2388f18df54472e43e",
+      values: {}
+    };
+  })();
+</script>
+<!-- wirte는 위험하여 호출 발생 변경 -->
+<script id="zsiqscript" defer src="https://salesiq.zoho.com/widget"></script>
+</head><body><div id="zsiqwidget"></div>
 
   <script>
     if (global === undefined) {
@@ -65,9 +76,9 @@
   <!-- <script>
     (function () { var w = window; var ic = w.Intercom; if (typeof ic === "function") { ic('reattach_activator'); ic('update', intercomSettings); } else { var d = document; var i = function () { i.c(arguments) }; i.q = []; i.c = function (args) { i.q.push(args) }; w.Intercom = i; function l() { var s = d.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'https://widget.intercom.io/widget/owfc73xh'; var x = d.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x); } if (w.attachEvent) { w.attachEvent('onload', l); } else { w.addEventListener('load', l, false); } } })()
   </script> -->
-<style>@charset "UTF-8";*{font-family:Roboto,sans-serif;box-sizing:initial}body,html{margin:0;height:100%;background:#494949;font-family:Roboto,sans-serif;color:#000000de;-webkit-font-smoothing:antialiased;overflow-y:hidden}.absolute-center-xy{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}.loading-info-container{color:#fff;position:absolute;width:100%;display:flex;flex-direction:row;align-items:center;justify-content:center;height:50px}.loading-info-container .loading-text{font-size:18px}.loading-info-container .loading-spinner-container{position:relative;width:50px;height:40px;margin-left:7px}.loading-info-container .loading-spinner-container .module-load-spinner{opacity:.8}.module-load-spinner{width:50px;height:40px;text-align:center;font-size:10px}.module-load-spinner>div{background-color:#fff;height:100%;width:6px;display:inline-block;animation:module-load-stretchdelay 1.2s ease-in-out infinite}.module-load-spinner .rect2{animation-delay:-1.1s}.module-load-spinner .rect3{animation-delay:-1s}.module-load-spinner .rect4{animation-delay:-.9s}.module-load-spinner .rect5{animation-delay:-.8s}@keyframes module-load-stretchdelay{0%,40%,to{transform:scaleY(.4);-webkit-transform:scaleY(.4)}20%{transform:scaleY(1);-webkit-transform:scaleY(1)}}*{scrollbar-color:#0003 #fff;scrollbar-width:thin}</style><link rel="stylesheet" href="styles.187352261625ee6bed78.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.187352261625ee6bed78.css"></noscript></head>
+<style>@charset "UTF-8";*{font-family:Roboto,sans-serif;box-sizing:initial}body,html{margin:0;height:100%;background:#494949;font-family:Roboto,sans-serif;color:#000000de;-webkit-font-smoothing:antialiased;overflow-y:hidden}.absolute-center-xy{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}.loading-info-container{color:#fff;position:absolute;width:100%;display:flex;flex-direction:row;align-items:center;justify-content:center;height:50px}.loading-info-container .loading-text{font-size:18px}.loading-info-container .loading-spinner-container{position:relative;width:50px;height:40px;margin-left:7px}.loading-info-container .loading-spinner-container .module-load-spinner{opacity:.8}.module-load-spinner{width:50px;height:40px;text-align:center;font-size:10px}.module-load-spinner>div{background-color:#fff;height:100%;width:6px;display:inline-block;animation:module-load-stretchdelay 1.2s ease-in-out infinite}.module-load-spinner .rect2{animation-delay:-1.1s}.module-load-spinner .rect3{animation-delay:-1s}.module-load-spinner .rect4{animation-delay:-.9s}.module-load-spinner .rect5{animation-delay:-.8s}@keyframes module-load-stretchdelay{0%,40%,to{transform:scaleY(.4);-webkit-transform:scaleY(.4)}20%{transform:scaleY(1);-webkit-transform:scaleY(1)}}*{scrollbar-color:#0003 #fff;scrollbar-width:thin}</style><link rel="stylesheet" href="styles.187352261625ee6bed78.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.187352261625ee6bed78.css"></noscript>
 
-<body>
+
   <app-root>
     <div class="loading-info-container absolute-center-xy">
       <div class="loading-text" style="color: #fff;">Loading app...</div>
@@ -82,7 +93,7 @@
       </div>
     </div>
   </app-root>
-<script src="runtime.db12f7224078f60c7fae.js" defer></script><script src="polyfills.4fa418fd96deeb974ffb.js" defer></script><script src="main.ef0386940523d939428a.js" defer></script>
+<script src="runtime.db12f7224078f60c7fae.js" defer></script><script src="polyfills.4fa418fd96deeb974ffb.js" defer></script><script src="main.d677e0614ed83f6430f3.js" defer></script>
 
 
 </body></html>
